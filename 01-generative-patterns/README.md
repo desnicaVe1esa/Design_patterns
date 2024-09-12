@@ -1,1 +1,1 @@
-![dgenerative-patterns.jpg](generative-patterns.jpg)
+![generative-patterns.jpg](generative-patterns.jpg)
