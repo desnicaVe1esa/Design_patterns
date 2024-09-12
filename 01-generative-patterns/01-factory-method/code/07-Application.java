@@ -1,6 +1,6 @@
 public class Application {
 
-    public Dialog dialog;
+    private Dialog dialog;
 
     // Приложение создаёт определённую фабрику в зависимости от конфигурации или окружения.
     public void initialize() {
