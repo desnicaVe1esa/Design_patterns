@@ -1,4 +1,5 @@
-<p>
-<img src="prototype-structure-1.jpg" alt="prototype-structure-1">
-<img src="prototype-structure-2.jpg" alt="prototype-structure-2">
-</p>
+![prototype.jpg](prototype.jpg)
+
+![prototype-structure.jpg](prototype-structure.jpg)
+
+![prototype-example.jpg](prototype-example.jpg)
