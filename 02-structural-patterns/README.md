@@ -1,0 +1,1 @@
+![structural-patterns.jpg](structural-patterns.jpg)
