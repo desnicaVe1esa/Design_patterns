@@ -1,16 +1,13 @@
 public class Application {
 
-    private Dialog dialog;
+    private static Dialog dialog;
 
     // Приложение создаёт определённую фабрику в зависимости от конфигурации или окружения.
-    public void initialize() {
-        Config config = readApplicationConfigFile();
-        if (config.OS == "Windows") {
+    public static void initialize() {
+        if (System.getProperty("os.name").equals("Windows 10")) {
             dialog = new WindowsDialog();
-        } else if (config.OS == "Web") {
-            dialog = new WebDialog();
         } else {
-            throw new Exception("Error! Unknown operating system.");
+            dialog = new WebDialog();
         }
     }
 
@@ -19,7 +16,7 @@ public class Application {
         будет не важно, какая фабрика была создана изначально.
     */
     public static void main(String[] args) {
-        this.initialize();
+        initialize();
         dialog.render();
     }
 }
