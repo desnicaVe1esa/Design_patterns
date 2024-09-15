@@ -6,20 +6,33 @@
  */
 public class Rectangle extends Shape {
 
-    private int width;
-    private int height;
+    public int width;
+    public int height;
 
-    public Rectangle(Rectangle source) {
-    /*
-        Вызов родительского конструктора нужен, чтобы скопировать потенциальные приватные поля, объявленные в
-        родительском классе.
-    */
-        super(source);
-        this.width = source.width;
-        this.height = source.height;
+    public Rectangle() {
     }
 
+    public Rectangle(Rectangle target) {
+        /*
+            Вызов родительского конструктора нужен, чтобы скопировать потенциальные приватные поля, объявленные в
+            родительском классе.
+        */
+        super(target);
+        if (target != null) {
+            this.width = target.width;
+            this.height = target.height;
+        }
+    }
+
+    @Override
     public Shape clone() {
-        return new Rectangle(this)
+        return new Rectangle(this);
+    }
+
+    @Override
+    public boolean equals(Object object2) {
+        if (!(object2 instanceof Rectangle) || !super.equals(object2)) return false;
+        Rectangle shape2 = (Rectangle) object2;
+        return shape2.width == width && shape2.height == height;
     }
 }
