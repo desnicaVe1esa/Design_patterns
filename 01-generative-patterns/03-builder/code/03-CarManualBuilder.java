@@ -16,11 +16,13 @@ public class CarManualBuilder implements Builder {
     }
 
     // Описать, сколько мест в машине.
+    @Override
     public void setSeats(int seats) {
         this.seats = seats;
     }
 
     // Добавить в руководство описание двигателя.
+    @Override
     public void setEngine(Engine engine) {
         this.engine = engine;
     }
@@ -31,11 +33,13 @@ public class CarManualBuilder implements Builder {
     }
 
     // Добавить в руководство описание системы навигации.
+    @Override
     public void setTripComputer(TripComputer tripComputer) {
         this.tripComputer = tripComputer;
     }
 
     // Добавить в инструкцию инструкцию GPS.
+    @Override
     public void setGPSNavigator(GPSNavigator gpsNavigator) {
         this.gpsNavigator = gpsNavigator;
     }
