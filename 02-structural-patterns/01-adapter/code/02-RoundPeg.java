@@ -1,13 +1,15 @@
 public class RoundPeg {
 
-    private int radius;
+    private double radius;
 
-    public RoundPeg(int radius) {
+    public RoundPeg() {}
+
+    public RoundPeg(double radius) {
         this.radius = radius;
     }
 
     // Вернуть радиус круглого колышка.
-    public int getRadius() {
-        return this.radius;
+    public double getRadius() {
+        return radius;
     }
 }

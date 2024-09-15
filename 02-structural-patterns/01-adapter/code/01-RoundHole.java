@@ -2,18 +2,20 @@
  * Классы с совместимыми интерфейсами: КруглоеОтверстие и КруглыйКолышек.
  */
 public class RoundHole {
-    private int radius;
+    private double radius;
 
-    public RoundHole(int radius) {
+    public RoundHole(double radius) {
         this.radius = radius;
     }
 
     // Вернуть радиус отверстия.
-    public int getRadius() {
-        return this.radius;
+    public double getRadius() {
+        return radius;
     }
 
-    public int fits(RoundPeg peg) {
-        return this.getRadius() >= peg.getRadius();
+    public boolean fits(RoundPeg peg) {
+        boolean result;
+        result = (this.getRadius() >= peg.getRadius());
+        return result;
     }
 }

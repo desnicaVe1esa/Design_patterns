@@ -7,14 +7,18 @@ public class SquarePegAdapter extends RoundPeg {
 
     public SquarePegAdapter(SquarePeg peg) {
         this.peg = peg;
-
-
     }
 
-    // Вычислить половину диагонали квадратного колышка по теореме Пифагора.
-    public int getRadius() {
-        return peg.getWidth() * Math.sqrt(2) / 2;
-
+    @Override
+    public double getRadius() {
+        double result;
+        /*
+            Вычислить половину диагонали квадратного колышка по теореме Пифагора. Рассчитываем минимальный радиус,
+            в который пролезет этот колышек.
+        */
+        result = (Math.sqrt(Math.pow((peg.getWidth() / 2), 2) * 2));
+        return result;
     }
+
 }
 
