@@ -1,8 +1,3 @@
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 public class WindowsButton implements Button {
 
     JPanel panel = new JPanel();
@@ -10,6 +5,7 @@ public class WindowsButton implements Button {
     JButton button;
 
     // Отрисовать кнопку в стиле Windows.
+    @Override
     public void render() {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JLabel label = new JLabel("Hello World!");
@@ -29,6 +25,7 @@ public class WindowsButton implements Button {
     }
 
     // Навесить на кнопку обработчик событий Windows.
+    @Override
     public void onClick() {
         button = new JButton("Exit");
         button.addActionListener(new ActionListener() {

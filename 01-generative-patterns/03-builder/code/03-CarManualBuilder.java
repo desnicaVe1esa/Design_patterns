@@ -3,30 +3,45 @@
  * общему интерфейсу, строители могут создавать совершенно разные продукты, которые не имеют общего предка.
  */
 public class CarManualBuilder implements Builder {
-    private Manual manual;
+    private CarType type;
+    private int seats;
+    private Engine engine;
+    private Transmission transmission;
+    private TripComputer tripComputer;
+    private GPSNavigator gpsNavigator;
 
-    // Поместить новый объект Manual в поле "manual".
-    public void reset() {
+    @Override
+    public void setCarType(CarType type) {
+        this.type = type;
     }
 
-
     // Описать, сколько мест в машине.
-    public void setSeats(...) {
+    public void setSeats(int seats) {
+        this.seats = seats;
     }
 
     // Добавить в руководство описание двигателя.
-    public void setEngine(...) {
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
+    @Override
+    public void setTransmission(Transmission transmission) {
+        this.transmission = transmission;
     }
 
     // Добавить в руководство описание системы навигации.
-    public void setTripComputer(...) {
+    public void setTripComputer(TripComputer tripComputer) {
+        this.tripComputer = tripComputer;
     }
 
     // Добавить в инструкцию инструкцию GPS.
-    public void setGPS(...) {
+    public void setGPSNavigator(GPSNavigator gpsNavigator) {
+        this.gpsNavigator = gpsNavigator;
     }
 
     // Вернуть текущий объект руководства.
     public Manual getResult() {
+        return new Manual(type, seats, engine, transmission, tripComputer, gpsNavigator);
     }
 }
