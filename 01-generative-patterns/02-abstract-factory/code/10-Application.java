@@ -4,19 +4,16 @@
  */
 public class Application {
 
-    private GUIFactory factory;
-
-    private Button button
+    private Button button;
+    private CheckBox checkbox;
 
     public Application(GUIFactory factory) {
-        this.factory = factory;
-    }
-
-    public void createUI() {
         this.button = factory.createButton();
+        this.checkbox = factory.createCheckbox();
     }
 
     public void paint() {
         button.paint();
+        checkbox.paint();
     }
 }

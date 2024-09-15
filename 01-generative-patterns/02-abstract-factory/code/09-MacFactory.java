@@ -7,7 +7,7 @@ public class MacFactory implements GUIFactory {
         return new MacButton();
     }
 
-    public Checkbox createCheckbox() {
-        return new MacCheckbox();
+    public CheckBox createCheckbox() {
+        return new MacCheckBox();
     }
 }

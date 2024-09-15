@@ -4,5 +4,5 @@
 public interface GUIFactory {
     Button createButton();
 
-    Checkbox createCheckbox();
+    CheckBox createCheckbox();
 }

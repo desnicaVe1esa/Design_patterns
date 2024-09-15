@@ -6,7 +6,7 @@ public class WinFactory implements GUIFactory {
         return new WinButton();
     }
 
-    public Checkbox createCheckbox() {
-        return new WinCheckbox();
+    public CheckBox createCheckbox() {
+        return new WinCheckBox();
     }
 }

@@ -2,15 +2,22 @@
  * Приложение выбирает тип конкретной фабрики и создаёт её динамически, исходя из конфигурации или окружения.
  */
 public class ApplicationConfigurator {
-    public static void main(String[] args) {
-        Config config = readApplicationConfigFile();
-        if (config.OS == "Windows") {
-            factory = new WinFactory();
-        } else if (config.OS == "Mac") {
+
+    private static Application configureApplication() {
+        Application app;
+        GUIFactory factory;
+        String osName = System.getProperty("os.name").toLowerCase();
+        if (osName.contains("mac")) {
             factory = new MacFactory();
         } else {
-            throw new Exception("Error! Unknown operating system.");
+            factory = new WinFactory();
         }
-        Application app = new Application(factory);
+        app = new Application(factory);
+        return app;
+    }
+
+    public static void main(String[] args) {
+        Application app = configureApplication();
+        app.paint();
     }
 }
