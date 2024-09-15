@@ -2,8 +2,8 @@
  * Приложение выбирает тип конкретной фабрики и создаёт её динамически, исходя из конфигурации или окружения.
  */
 public class ApplicationConfigurator {
-    public void main() {
-        config = readApplicationConfigFile();
+    public static void main(String[] args) {
+        Config config = readApplicationConfigFile();
         if (config.OS == "Windows") {
             factory = new WinFactory();
         } else if (config.OS == "Mac") {

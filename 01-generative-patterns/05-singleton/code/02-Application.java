@@ -1,5 +1,5 @@
 public class Application {
-    public main() {
+    public static void main(String[] args) {
         Database foo = Database.getInstance();
         foo.query("SELECT ...");
         // ...

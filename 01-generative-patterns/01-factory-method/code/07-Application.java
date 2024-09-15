@@ -4,7 +4,7 @@ public class Application {
 
     // Приложение создаёт определённую фабрику в зависимости от конфигурации или окружения.
     public void initialize() {
-        config = readApplicationConfigFile();
+        Config config = readApplicationConfigFile();
         if (config.OS == "Windows") {
             dialog = new WindowsDialog();
         } else if (config.OS == "Web") {
@@ -18,7 +18,7 @@ public class Application {
         Если весь остальной клиентский код работает с фабриками и продуктами только через общий интерфейс, то для него
         будет не важно, какая фабрика была создана изначально.
     */
-    public void main() {
+    public static void main(String[] args) {
         this.initialize();
         dialog.render();
     }
