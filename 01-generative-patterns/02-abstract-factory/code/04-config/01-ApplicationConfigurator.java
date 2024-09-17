@@ -2,7 +2,7 @@
  * Для кода, использующего фабрику, не важно, с какой конкретно фабрикой он работает. Все получатели продуктов работают
  * с ними через общие интерфейсы.
  */
-public class Application {
+public class ApplicationConfigurator {
 
     private Button button;
     private CheckBox checkbox;
