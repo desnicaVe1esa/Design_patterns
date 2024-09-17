@@ -1,1 +1,1 @@
-![03-behavioral-patterns.jpg](03-behavioral-patterns.jpg)
+![03-behavioral-patterns.jpg](behavioral-patterns.jpg)
